@@ -2,7 +2,7 @@
 
 ## Where's the Layout?
 
-YouTube Video: https://youtu.be/r4e0i_e5G9k
+YouTube Video: https://youtu.be/
 
 Blazor Puzzle Home Page: https://blazorpuzzle.com
 
@@ -48,3 +48,17 @@ This is the result:
 ![image-20240402114006438](images/image-20240402114006438.png)
 
 How can we fix this?
+
+### The Solution:
+
+The solution is to add the `nonfile` constraint to the argument:
+
+```c#
+@page "/"
+@page "/{arg:nonfile}"
+```
+
+We learned about this by raising the issue on GitHub:
+
+https://github.com/dotnet/aspnetcore/issues/54880
+
